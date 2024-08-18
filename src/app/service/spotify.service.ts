@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Buffer } from 'buffer';
 import { map, switchMap } from 'rxjs';
 import { tokenItf } from '../models/token.model';
+import { albumsItf } from '../models/albums.model';
 
 @Injectable({
   providedIn: 'root'
@@ -49,7 +50,16 @@ private tokenUrl: string = 'https://accounts.spotify.com/api/token';
         const url = `https://api.spotify.com/v1/artists/1YOVBTvznjiDvtAj4ExHeo?si=b4oJvEcvTa2GYBF_3zdoFA`;
         return this.http.get<any>(url, { headers });
       };
+
+  
+  getAlbums(token:tokenItf):Observable<any>{
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token.access_token}`
+    });
+    const url = `https://api.spotify.com/v1/artists/1YOVBTvznjiDvtAj4ExHeo/albums?include_groups=album%2Csingle&limit=50`
+    return this.http.get<any>(url, {headers})
   }
+}
   
   
 

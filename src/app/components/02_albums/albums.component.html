@@ -1,1 +1,38 @@
-<p>albums works!</p>
+
+<div class="m-0 w-100 p-3 ">
+    <div id="lista" class="row ">
+        
+
+        <div id="item" class="col-lg-6 m-0 d-flex flex-row" *ngFor="let album of albums1">
+            
+            <img class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
+            <div id="infos">
+                <h3 id="titulo">{{album.name}}</h3>
+                <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
+                <p *ngFor="let artista of album.artists"> {{artista.name}} </p>
+            </div>
+        </div>
+ 
+        <div id="item" class="col-lg-6 m-0 d-flex flex-row" *ngFor="let album of albums2">
+            <img class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
+            <div id="infos">
+                <h3 id="titulo">{{album.name}}</h3>
+                <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
+                <p *ngFor="let artista of album.artists"> {{artista.name}} </p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div id="item" class="col-lg-6 m-0 text-center d-flex flex-row " *ngIf="lastAlbum !=null" > 
+            <img class="rounded-2" src="{{this.lastAlbum.images[0].url}}" alt="AlbumImg">
+            <div id="infos">
+                <h3 id="titulo">{{this.lastAlbum.name}}</h3>
+                <p>{{this.lastAlbum.release_date.slice(0,4)}} - {{this.lastAlbum.album_type}}</p>
+                <p *ngFor="let artista of this.lastAlbum.artists"> {{artista.name}} </p>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
