@@ -1,14 +1,16 @@
 *{
-    background-color: #20658d;
+    background-color: #2f556b;
 }
 #corpo{
-    
+    display: flex;
+    height: 95%;
     width:100.65%;
-    height: 6rem;
+    
     font-family:  sans-serif;
     font-style: normal;
     font-size: 1.8rem;
     font-weight: 400;
+
     
     
 }
@@ -19,16 +21,51 @@
 }
 
 #thrdcol img{
-  height: 42.19px;
+ 
   width: auto;
+}
+#thrdcol{
+    padding: 1.5rem 0 0 0;
 }
 
 li{
+
+   
     height: auto;
     width: auto;
 }
 
+li a{
+    display:flex ;
+    height: auto;
+
+}
+
+
+li:hover{
+    
+    transform: scale(1.05);
+}
+
+
+
+li *:hover{
+    text-shadow: 0px 0px 20px 20px white;
+}
+
 #menu{
-    margin: 20px;
-    margin-bottom: 0;
+    margin: 0 20px 0 20px;
+    
+}
+
+#youtube{
+    height: 2.5rem;
+}
+
+#spotify{
+    height: 2rem;
+}
+
+#instagram{
+    height: 2rem;
 }

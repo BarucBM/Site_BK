@@ -1,5 +1,21 @@
+.liu-jian-mao-cao-regular {
+    font-family: "Liu Jian Mao Cao", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#corpo{
+    background-color: black;
+    width: auto;
+    height: auto;
+    text-align: end;
+}
 p{
+    margin: 0 1rem 0 0;
+    padding: 0 0 0.5rem 0;
     height: 3rem;
-    width: 3rem;
-    color: black;
+    width: auto;
+    color: rgb(255, 255, 255);
+    font-family: "Liu Jian Mao Cao", cursive ;
+    font-size: 1.5rem;
 }
