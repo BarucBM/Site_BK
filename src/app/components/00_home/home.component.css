@@ -1,20 +1,39 @@
+.gochi-hand-regular {
+    font-family: "Gochi Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 #fstrow{
     background-image: url('https://midias.correio24horas.com.br/2024/04/24/bk-2084246-article.jpg');
     background-size: cover;
 
-    height: auto;
+    height:100vh;
     width: auto;
 }
 
 #fstrow img{
-    height: 700px;
+    height:100%;
     width: auto;
 }
 
 iframe{
     position: absolute;
     top: 10rem;
-    left: 6rem;
+    right: 6rem;
     width: 30rem;
     height: 20rem;
+}
+
+h1{
+    position: absolute;
+    top: 12rem;
+    left: 4rem;
+
+    color: rgba(46, 90, 116, 0.801);
+    font-style:italic;
+    font-family: "Gochi Hand", cursive;
+    font-size: 5rem;
+
+    text-shadow: 1px 1px rgb(255, 255, 255);
 }

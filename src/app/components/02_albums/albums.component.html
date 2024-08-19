@@ -1,38 +1,71 @@
-
-<div class="m-0 w-100 p-3 ">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 40
+    }
+    </style>
+<div id="corpo" class="m-0 w-100">
     <div id="lista" class="row ">
         
-
-        <div id="item" class="col-lg-6 m-0 d-flex flex-row" *ngFor="let album of albums1">
-            
-            <img class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
-            <div id="infos">
-                <h3 id="titulo">{{album.name}}</h3>
-                <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
-                <p *ngFor="let artista of album.artists"> {{artista.name}} </p>
-            </div>
+        
+        <div  class="col-5  " >
+            <ul class="p-0">
+                <li id="item" class="d-flex flex-row   rounded-2" *ngFor="let album of albums1">
+                    <img id="albumimg" class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
+                    <div id="infos">
+                        <h3 id="titulo">{{album.name}}</h3>
+                        <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
+                        <div class="d-flex flex-row">
+                            <p *ngFor="let artista of album.artists"> • {{artista.name}} • </p>
+                        </div>
+                    </div>
+                    <a id="redirect"  target="_blank" href="{{album.external_urls.spotify}}"><span class="material-symbols-outlined">
+                        open_in_new
+                        </span>  </a>
+                </li>
+            </ul>
         </div>
- 
-        <div id="item" class="col-lg-6 m-0 d-flex flex-row" *ngFor="let album of albums2">
-            <img class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
-            <div id="infos">
-                <h3 id="titulo">{{album.name}}</h3>
-                <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
-                <p *ngFor="let artista of album.artists"> {{artista.name}} </p>
-            </div>
+        <div class="col-1 m-0 p-0" ></div>
+        <div  class="col-5  " >
+            <ul>
+                <li id="item" class="d-flex flex-row rounded-2" *ngFor="let album of albums2">
+                    <img id="albumimg" class="rounded-2" src="{{album.images[0].url}}" alt="AlbumImg">
+                    <div id="infos">
+                        <h3 id="titulo">{{album.name}}</h3>
+                        <p>{{album.release_date.slice(0,4)}} - {{album.album_type}}</p>
+                        <div class="d-flex flex-row">
+                            <p *ngFor="let artista of album.artists"> • {{artista.name}} • </p>
+                        </div>
+                        
+                    </div>
+                    <a id="redirect"  target="_blank" href="{{album.external_urls.spotify}}"><span class="material-symbols-outlined">
+                        open_in_new
+                        </span>  </a>
+                </li>
+            </ul>
         </div>
         
     </div>
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div id="item" class="col-lg-6 m-0 text-center d-flex flex-row " *ngIf="lastAlbum !=null" > 
-            <img class="rounded-2" src="{{this.lastAlbum.images[0].url}}" alt="AlbumImg">
+        <div id="divisoria" class="col-3 "></div>
+        <div class="col-5">
+        <div id="item" class="d-flex flex-row rounded-2  " *ngIf="lastAlbum !=null" > 
+            <img id="albumimg" class="rounded-2" src="{{this.lastAlbum.images[0].url}}" alt="AlbumImg">
             <div id="infos">
                 <h3 id="titulo">{{this.lastAlbum.name}}</h3>
                 <p>{{this.lastAlbum.release_date.slice(0,4)}} - {{this.lastAlbum.album_type}}</p>
-                <p *ngFor="let artista of this.lastAlbum.artists"> {{artista.name}} </p>
+                <div class="d-flex flex-row">
+                    <p *ngFor="let artista of this.lastAlbum.artists"> • {{artista.name}} • </p>
+                </div>
             </div>
+            <a id="redirect"  target="_blank" href="{{this.lastAlbum.external_urls.spotify}}"><span class="material-symbols-outlined">
+                open_in_new
+                </span>  </a>  
         </div>
-        <div class="col-lg-3"></div>
+    </div>
     </div>
 </div>

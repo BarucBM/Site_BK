@@ -1,9 +1,9 @@
 *{
     background-color: #20658d;
 }
-#container{
+#corpo{
     
-    width: auto;
+    width:100.65%;
     height: 6rem;
     font-family:  sans-serif;
     font-style: normal;
@@ -13,7 +13,7 @@
     
 }
 
-#container *{
+#corpo *{
     color: beige;
     margin-bottom: 0;
 }
